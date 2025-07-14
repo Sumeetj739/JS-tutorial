@@ -25,3 +25,9 @@ const myFunction=function(){
     console.log("hello world");
     
 }
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//memory :Stack (primitive)  ,heap (non-primitive)
+
