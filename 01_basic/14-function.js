@@ -30,5 +30,42 @@ function loginUserMessage(userName){
     return `${userName} just logged in`
 }
 
-console.log(loginUserMessage("sumeet"))
-console.log(loginUserMessage()) //if we does not pass value here by default it take default value
+// console.log(loginUserMessage("sumeet"))
+// console.log(loginUserMessage()) //if we does not pass value here by default it take default value
+
+
+//cart function with rest operater
+
+
+function calculateCartPrice(...num1){
+return num1
+}
+
+// console.log(calculateCartPrice(200,400,500));
+
+//function to  handle object
+const user ={
+    // userName1:"sumeet",
+    // price:199
+}
+
+function handleObject(anyObject){
+    console.log(`user is ${anyObject.userName1} and price is ${anyObject.price}`);
+    
+}
+
+handleObject(user);
+
+handleObject({
+    userName1:"sam", //here we can pass the object also
+    price:3999
+})
+
+
+const myNewArray=[200,400,100,600]
+
+function returnsecondValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnsecondValue(myNewArray));

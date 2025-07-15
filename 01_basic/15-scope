@@ -1,0 +1,64 @@
+var c = 300;
+let a = 500;
+
+if (true) {
+  let a = 10; //scope oriented
+  const b = 20; //scope oriented
+  var c = 30; //var is global variable we avoid var
+  //   console.log("inner", a);
+}
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log("outer", a);
+
+//----------------nested scope
+
+function one() {
+  const username = "sumeet";
+
+  function two() {
+    const website = "youtube";
+    console.log(username); //its called as closure here inner function can access element of outer function
+  }
+//   console.log(website); due to block scope we cam not acccess website 
+  
+  two()
+}
+
+one()
+
+
+if(true){
+    const username="sumeet"
+    if(username === "sumeet"){
+        const website=" youtube"
+        console.log(username  +  website);
+        
+    }
+
+    // console.log(website); can not access due to block scope
+    
+}
+
+// console.log(username);  can not access due to block scope
+
+
+//+++++++++++++++++++interesting++++++++++++++++++++++//
+
+
+console.log(addOne(5));
+
+
+function addOne(num){
+    return num +1 
+}
+
+
+
+const addTwo =function(num){ //when we declare function and hold it is variable it can not call before declration liki addOne its called as hoisting
+    return num + 2
+}
+
+console.log(addTwo(5));
