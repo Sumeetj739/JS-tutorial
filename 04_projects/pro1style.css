@@ -1,0 +1,33 @@
+.button{
+    height: 100px;
+    width: 100px;
+    border: solid 2px black;
+ display: inline-block;
+    flex-direction: row;
+
+}
+
+.container{
+
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+#red{
+    background-color: red;
+}
+
+
+#pink{
+    background-color: pink;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#green{
+    background-color: green;
+}
