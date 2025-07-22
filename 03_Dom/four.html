@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <ul class="language">
+      <li>Js</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(lanName) {
+      document.createElement("li");
+      const li = document.createElement("li"); //created function for adding li element above html list
+      li.innerHTML = `${lanName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addLanguage("c++");
+    addLanguage("html"); //calling function and passing values to it
+
+    //crating another method for largeascale project  with optimized way
+
+    function addOptiLanguages(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addOptiLanguages("css");
+
+    //editing the text of an element
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+
+    const newLi = document.createElement("li");
+    newLi.textContent = "mojo";
+    secondLang.replaceWith(newLi); //replacing the second element with new element
+
+    //another way to edit the text of an element
+const firstLang= document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>typeScript</li>' 
+
+
+//removing an element
+
+const lastLang = document.querySelector("li:last-child");
+lastLang.remove(); //removing the last element
+</script>
+</html>

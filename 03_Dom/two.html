@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+</body>
+
+<script>
+    const parent =document.querySelector('.parent')  //selecting parent class and storing it in variable
+    console.log(parent);         //log parent class
+    console.log(parent.children);   //checking parent having how mant children
+    console.log(parent.children[1]);  //got html element and accesing 1 element 
+    
+
+
+    for (let index = 0; index < parent.children.length; index++) {   
+         console.log(parent.children[index].innerHTML);
+        //applying for loop on parent.children for getting values
+    }
+
+    console.log(parent.firstElementChild);   //used  for selectng first child from parent node
+    console.log(parent.lastElementChild);     //used  for selecting last child from parent node
+
+    
+    parent.children[1].style.color="pink"
+
+    const dayOne = document.querySelector('.day'); //selecting first element with class day
+    console.log(dayOne);  //log first element with class day
+    console.log(dayOne.parentElement); //log parent element of first element with class day
+    console.log(dayOne.nextElementSibling); //log next sibling of first element with class day
+    
+    console.log("nodes",parent.childNodes); //log all child nodes of parent element and it will include text nodes as well
+    
+</script>
+</html>
