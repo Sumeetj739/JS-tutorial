@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="gtn.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>number guessing game</h1>
+      <p>try and guess random number between 1 to 10</p>
+      <p>you have 10 attempts to guess the number</p>
+      <br />
+      <form class="form">
+        <label for=" guessfield" id="guess">guess a number</label>
+        <input type="text" id="guessfield" class="guessfield" />
+        <input
+          type="submit"
+          id="subt"
+          value="submit guess"
+          class="guesSubmit"
+        />
+      </form>
+
+      <div class="resultparas">
+        <p>previous guesses <span class="guesses"></span></p>
+        <p>guesses remaining <span class="lastResult">10</span></p>
+      </div>
+      <p class="loworHi"></p>
+    </div>
+
+    <script src="gtn.js"></script>
+  </body>
+</html>
