@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai aur js</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+ 
+
+    document.querySelector("#start").addEventListener("click", function () { //selecting button
+      const intervalId = function () {
+        //it used to run a function repeatedly at specified intervals
+        console.log("hello world");
+      };
+
+      const hold = setInterval(intervalId, 1000);   // setting an interval to call intervalId every second
+
+      document.querySelector("#stop").addEventListener("click", function () {   // selecting stop button
+        clearInterval(hold); // This will stop the interval from running
+      });
+    });
+  </script>
+</html>

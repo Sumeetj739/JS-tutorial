@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+  <h1>async</h1>
+  <button id="stop">stop</button>
+
+  <script>
+    const sayhello = function () { // function to be called after timeout
+      document.querySelector("h1").innerHTML = "say sam";
+    };
+
+    // store the timeout ID
+    const timeoutId = setTimeout(sayhello, 2000); // set a timeout to call sayhello after 2 seconds
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(timeoutId); // correct way to cancel the timeout
+      console.log("Timeout stopped");
+    });
+  </script>
+</body>
+</html>
